@@ -5,11 +5,13 @@
 
 """
 
+
 class Node:
     """
     A class to create a node.  The original form of this code is from the Essential Algorithms course at
     Harrisburg University of Science & Technology.
     """
+
     def __init__(self, data, next_node):
         """
 
@@ -26,6 +28,7 @@ class sList:
     A class to create a singular linked list.  The original form of this code is from the Essential Algorithms course at
     Harrisburg University of Science & Technology.
     """
+
     def __init__(self):
         """
         Constructor
