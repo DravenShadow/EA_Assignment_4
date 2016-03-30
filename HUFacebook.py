@@ -22,16 +22,22 @@ def default_list_load():
     friend_list_2 = sList()
     friend_list_3 = sList()
     friend_list_4 = sList()
+    friend_list_5 = sList()
+    friend_list_6 = sList()
 
     friend_list_1.add_Front("derek")
     friend_list_2.add_Front("zack's beard")
     friend_list_3.add_Front("rowland")
     friend_list_4.add_Front("zack")
+    friend_list_5.add_Front("doug's EGO")
+    friend_list_6.add_front("doug")
 
     hu_book["rowland"] = friend_list_1
     hu_book["derek"] = friend_list_3
     hu_book["zack"] = friend_list_2
     hu_book["zack's beard"] = friend_list_4
+    hu_book["doug"] = friend_list_5
+    hu_book["doug's EGO"] = friend_list_6
 
 
 def create_user():
