@@ -1,15 +1,46 @@
+"""
+            sList.py                            Author: Rowland DePree
+
+            Two classes to allow the creation of a singular linked list.
+
+"""
+
 class Node:
+    """
+    A class to create a node.  The original form of this code is from the Essential Algorithms course at
+    Harrisburg University of Science & Technology.
+    """
     def __init__(self, data, next_node):
+        """
+
+        :param data
+        :param next_node
+        :return None
+        """
         self.data = data
         self.next = next_node
 
 
 class sList:
+    """
+    A class to create a singular linked list.  The original form of this code is from the Essential Algorithms course at
+    Harrisburg University of Science & Technology.
+    """
     def __init__(self):
+        """
+        Constructor
+
+        :return None
+        """
         self.head_node = None
         self.size = 0
 
     def __str__(self):
+        """
+        Overwrites the str method to work better for a linked list.
+
+        :return ' ,'.join(output)
+        """
         output = []
         curr = self.head_node
         while curr is not None:
@@ -18,10 +49,23 @@ class sList:
         return ' ,'.join(output)
 
     def add_Front(self, data):
+        """
+        Adds a node to the front of the linked list
+
+        :param data
+        :return None
+        """
         self.head_node = Node(data, self.head_node)
         self.size += 1
 
     def remove(self, data):
+        """"
+        Removes a node from the linked list based upon the data given to it.
+
+        :param data
+        :return True
+        :return False
+        """
         if self.size == 0:
             return False
         elif self.head_node.data == data:
@@ -38,12 +82,3 @@ class sList:
                 curr.next = curr.next.next
                 self.size -= 1
                 return True
-
-    def return_node(self, index):
-        if index < 0 or self.head_node is None:
-            return None
-        elif index == 0:
-            return self.head_node
-        else:
-            self.head_node = self.head_node.next
-            return self.return_node(index - 1)
