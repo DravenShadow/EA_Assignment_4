@@ -162,38 +162,26 @@ def main():
             new_friend = raw_input("Enter in friends name:")
             add_friend(user, new_friend)
 
-            user_cont = raw_input("Do you wish to continue?[Y/N]\n")
-            if user_cont.lower() == "n":
-                cont = False
-            else:
-                pass
         elif user_input.lower() == "remove":
             user = raw_input("Enter in your username:")
             new_friend = raw_input("Enter in ex-friends name:")
             remove_friend(user, new_friend)
 
-            user_cont = raw_input("Do you wish to continue?[Y/N]\n")
-            if user_cont.lower() == "n":
-                cont = False
-            else:
-                pass
         elif user_input.lower() == "user":
             print_users()
-            user_cont = raw_input("Do you wish to continue?[Y/N]\n")
-            if user_cont.lower() == "n":
-                cont = False
-            else:
-                pass
+
         elif user_input.lower() == "friends":
             user = raw_input("Enter in the username to see their fiends list:")
             print_friends_list(user)
-            user_cont = raw_input("Do you wish to continue?[Y/N]\n")
-            if user_cont.lower() == "n":
-                cont = False
-            else:
-                pass
+
         else:
             print("Invalid Option!")
+
+        user_cont = raw_input("Do you wish to continue?[Y/N]\n")
+        if user_cont.lower() == "n":
+            cont = False
+        else:
+            pass
 
 
 """
