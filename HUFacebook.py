@@ -70,7 +70,7 @@ def remove_friend(username, friend):
 
     :return None
     """
-    if validate_user(friend):
+    if validate_user(friend) and username is not friend:
         hu_book[username].remove(friend)
         hu_book[friend].remove(username)
     else:
@@ -154,8 +154,8 @@ def main():
     print("HU Facebook Main Page")
     while cont:
         print(
-            "Do you wish add a friend, remove a friend, print a list of users or print a specific user's friends list...")
-        user_input = raw_input("[add/remove/user/friends]?\n")
+            "Do you wish add a friend, remove a friend, print a list of users, print a specific user's friends list, or create another user...")
+        user_input = raw_input("[add/remove/user/friends/create]?\n")
 
         if user_input.lower() == "add":
             user = raw_input("Enter in your username:")
@@ -173,6 +173,9 @@ def main():
         elif user_input.lower() == "friends":
             user = raw_input("Enter in the username to see their fiends list:")
             print_friends_list(user)
+
+        elif user.lower() == "create":
+            create_user()
 
         else:
             print("Invalid Option!")
