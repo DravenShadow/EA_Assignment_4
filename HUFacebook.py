@@ -30,7 +30,7 @@ def default_list_load():
     friend_list_3.add_Front("rowland")
     friend_list_4.add_Front("zack")
     friend_list_5.add_Front("doug's EGO")
-    friend_list_6.add_front("doug")
+    friend_list_6.add_Front("doug")
 
     hu_book["rowland"] = friend_list_1
     hu_book["derek"] = friend_list_3
