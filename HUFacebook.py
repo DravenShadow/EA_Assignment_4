@@ -57,7 +57,7 @@ def add_friend(username, friend):
 
     :return None
     """
-    if validate_user(friend):
+    if validate_user(friend) and username is not friend:
         hu_book[username].add_Front(friend)
         hu_book[friend].add_Front(username)
     else:
@@ -70,7 +70,7 @@ def remove_friend(username, friend):
 
     :return None
     """
-    if validate_user(friend) and username is not friend:
+    if validate_user(friend):
         hu_book[username].remove(friend)
         hu_book[friend].remove(username)
     else:
